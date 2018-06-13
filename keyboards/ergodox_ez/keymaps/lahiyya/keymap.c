@@ -21,11 +21,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Keymap 0: Basic layer
  *
  * ,--------------------------------------------------.           ,--------------------------------------------------.
- * |   =    |   1  |   2  |   3  |   4  |   5  | App  |           |  App |   6  |   7  |   8  |   9  |   0  |   -    |
+ * |   =    |   1  |   2  |   3  |   4  |   5  | Gui  |           |  Gui |   6  |   7  |   8  |   9  |   0  |   -    |
  * |--------+------+------+------+------+-------------|           |------+------+------+------+------+------+--------|
  * | Del    |   Q  |   W  |   E  |   R  |   T  | Esc  |           | Bksp |   Y  |   U  |   I  |   O  |   P  |   \    |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * | BkSp   |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |   ;  | ' / "  |
+ * |   /    |   A  |   S  |   D  |   F  |   G  |------|           |------|   H  |   J  |   K  |   L  |   ;  | ' / "  |
  * |--------+------+------+------+------+------| Tab  |           | Enter|------+------+------+------+------+--------|
  * | LShift |   Z  |   X  |   C  |   V  |   B  |      |           |      |   N  |   M  |   ,  |   .  |   ?  | RShift |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
@@ -36,23 +36,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                               ,------| -------|------|       |------+--------+------.
  *                               |      |        | Home |       | PgUp |        |      |
  *                               | Caps | LShift |------|       |------| RShift |Space |
- *                               |      |        | End  |       | Ctrl |        |      |
+ *                               |      |        | Ins  |       | Ctrl |        |      |
  *                               `----------------------'       `----------------------'
  */
 // If it accepts an argument (i.e, is a function), it doesn't need KC_.
 // Otherwise, it needs KC_*
 [BASE] = LAYOUT_ergodox(  // layer 0 : default
         // left hand
-        KC_EQL,         KC_1,         KC_2,   KC_3,   KC_4,   KC_5,   KC_APP,
+        KC_EQL,         KC_1,         KC_2,   KC_3,   KC_4,   KC_5,   KC_LGUI,
         KC_DELT,        KC_Q,         KC_W,   KC_E,   KC_R,   KC_T,   KC_ESC,
         KC_SLSH,        KC_A,         KC_S,   KC_D,   KC_F,   KC_G,
-        KC_LSFT,        KC_Z,         KC_X,   KC_C,   KC_V,   KC_B,   KC_TAB,
+        KC_LALT,        KC_Z,         KC_X,   KC_C,   KC_V,   KC_B,   KC_TAB,
         LT(SYMB,KC_GRV),KC_QUOT,      LALT(KC_LSFT),  KC_LEFT,KC_RGHT,
                                                      KC_TILD,  KC_LGUI,
                                                               KC_HOME,
-                                               KC_CAPS,KC_LSFT,KC_END,
+                                               KC_CAPS,KC_LSFT,KC_INS,
         // right hand
-             KC_APP  ,    KC_6,   KC_7,  KC_8,   KC_9,   KC_0,             KC_MINS,
+             KC_RGUI  ,    KC_6,   KC_7,  KC_8,   KC_9,   KC_0,             KC_MINS,
              KC_BSPC ,    KC_Y,   KC_U,  KC_I,   KC_O,   KC_P,             KC_BSLS,
                           KC_H,   KC_J,  KC_K,   KC_L,   KC_SCLN,          KC_QUOT,
              KC_ENT  ,    KC_N,   KC_M,  KC_COMM,KC_DOT, KC_SLSH,          KC_RSFT,
